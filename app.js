@@ -23,7 +23,6 @@ app.use('/api/', routes)
 //return the readme file if the home route is clicked
 app.get('/', (req, res)=> {
    fs.readFile("./README.md", "utf-8", (err, result) => {
-    console.log({result});
       res.send(result);
    });
 });
