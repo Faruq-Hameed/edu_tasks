@@ -16,8 +16,7 @@ const userSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Post",
     }]
-},
-    { timestamps: true }
+}
 );
 
 //post schema
@@ -34,8 +33,7 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true
     }
-},
-    { timestamps: true }
+}
 )
 
 const commentSchema = new mongoose.Schema({
@@ -55,13 +53,9 @@ const commentSchema = new mongoose.Schema({
         type: String,
         required: true
     }
-},
-    { timestamps: true }
+}
 )
 
-// // mongoose pagination plugins
-// userSchema.plugin(mongoosePaginate);
-// postSchema.plugin(mongoosePaginate);
 
 //schema models
 const User = mongoose.model("User", userSchema);
